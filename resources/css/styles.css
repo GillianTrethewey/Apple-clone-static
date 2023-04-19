@@ -1,0 +1,314 @@
+@font-face {
+  font-family: "SF-Pro-Medium";
+  src: url("../fonts/SF-Pro-Text-Medium.otf") format("otf");
+}
+@font-face {
+  font-family: "SF-Pro-Regular";
+  src: url("../fonts/SF-Pro-Text-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Thin";
+  src: url("../fonts/SF-Pro-Text-Thin.otf") format("otf");
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --nav: rgba(22, 22, 23, 0.8);
+  --nav-under: rgba(22, 22, 23, 0.9);
+  --muted-white: rgba(255, 255, 255, 0.7);
+  --main-font: "SF-Pro-Regular", Arial, sans-serif;
+  --med-font: "SF-Pro-Medium", Arial, sans-serif;
+  --thin-font: "SF-Pro-Thin", Arial, sans-serif;
+  --white: #f5f5f7;
+  --main-links: rgba(41, 151, 255);
+}
+
+html {
+  font-size: 16px;
+}
+
+/**************
+* TYPOGRAPHY
+**************/
+
+a.main-links {
+  color: var(--main-links);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+a.main-links:hover {
+  text-decoration: underline;
+  transition: text-decoration 2s ease;
+}
+
+a.main-links::after {
+  content: ">";
+  font-size: 1rem;
+}
+
+/**************
+*     HEADER
+***************/
+
+body {
+  line-height: 1;
+  font-family: var(--thin-font);
+  color: var(--white);
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--muted-white);
+  padding: 0.4rem 1rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  z-index: 100;
+  letter-spacing: -0.1px;
+  margin-right: --1.25rem;
+  background: var(--nav);
+  height: 45px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  width: 90%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-left {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center {
+  display: none;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-right {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  min-width: 8rem;
+}
+
+ul.nav-right li:last-child {
+  display: flex;
+}
+
+.nav-logo {
+  width: 1rem;
+  height: auto;
+  opacity: 0.8;
+}
+
+i {
+  color: var(--muted-white);
+  font-size: 1rem;
+}
+
+/**************
+* MAIN SECTION
+**************/
+
+section.module-content {
+  height: 500px;
+  background: no-repeat
+    url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_medium_2x.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+}
+
+.title-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 125px;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: var(--med-font);
+  letter-spacing: -0.2px;
+}
+
+.title-text-container span {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--thin-font);
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.links-container a {
+  margin-right: 2rem;
+  font-weight: 400;
+}
+
+.links-container a:last-child {
+  margin-right: 0;
+}
+
+/**************
+* MEDIA
+**************/
+
+@media (min-width: 833px) {
+  header {
+    margin-right: 0;
+  }
+
+  .nav-center {
+    display: flex;
+  }
+
+  .nav-right {
+    justify-content: start;
+  }
+
+  ul.nav-right li {
+    margin-left: 2rem;
+  }
+
+  ul.nav-right li:last-child {
+    display: none;
+  }
+
+  .nav-logo {
+    width: 0.8rem;
+  }
+
+  .title-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--med-font);
+    letter-spacing: -0.2px;
+  }
+
+  .title-text-container span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--thin-font);
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .links-container a {
+    margin-right: 1.75rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1068px) {
+  header {
+    height: 50px;
+  }
+  nav {
+    max-width: 83%;
+    padding-left: 4%;
+  }
+
+  .nav-right {
+    margin-left: 0;
+  }
+
+  ul.nav-right li {
+    justify-content: start;
+  }
+
+  section.module-content {
+    height: 675px;
+    background: no-repeat
+      url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_large_2x.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .title-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 165px;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3.25rem;
+    font-weight: 600;
+    font-family: var(--med-font);
+    letter-spacing: -0.2px;
+  }
+
+  .title-text-container span {
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: var(--thin-font);
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .links-container a {
+    margin-right: 2rem;
+    font-weight: 400;
+  }
+}
