@@ -40,17 +40,18 @@ html {
 a.main-links {
   color: var(--main-links);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+
+a i.fa-chevron-right {
+  color: var(--main-links);
+  margin-left: 7px;
+  font-size: 0.6rem;
 }
 
 a.main-links:hover {
   text-decoration: underline;
   transition: text-decoration 2s ease;
-}
-
-a.main-links::after {
-  content: ">";
-  font-size: 1rem;
 }
 
 /**************
@@ -65,14 +66,15 @@ body {
 }
 
 header {
+  width: 100%;
   display: flex;
+  position: fixed;
   justify-content: center;
   align-items: center;
   color: var(--muted-white);
   padding: 0.4rem 1rem;
   font-weight: 400;
   font-size: 0.75rem;
-  z-index: 100;
   letter-spacing: -0.1px;
   margin-right: --1.25rem;
   background: var(--nav);
@@ -139,7 +141,7 @@ i {
 * MAIN SECTION
 **************/
 
-section.module-content {
+section.module-content.hero {
   height: 500px;
   background: no-repeat
     url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_medium_2x.jpg");
@@ -151,7 +153,9 @@ section.module-content {
   padding: 30px;
 }
 
-.title-text-container {
+.title-text-container,
+.title-text-container.module-2,
+.title-text-container.module-3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -168,7 +172,7 @@ h1 {
 }
 
 .title-text-container span {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   font-family: var(--thin-font);
 }
@@ -187,6 +191,137 @@ h1 {
 
 .links-container a:last-child {
   margin-right: 0;
+}
+
+/**************
+* MODULE 2
+**************/
+
+section.module-content.module-2 {
+  height: 500px;
+  background: no-repeat
+    url("../images/module_2__iphone14_yellow__eun20sn4imi6_large.jpg");
+  background-size: 325%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+}
+
+.title-text-container.module-2 {
+  color: black;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.title-text-container.module-2 h2 {
+  font-size: 1.9rem;
+  font-family: var(--thin-font);
+  padding-top: 10px;
+}
+.title-text-container span {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+/**************
+*  MODULE 3
+***************/
+
+section.module-content.module-3 {
+  height: 500px;
+  background: no-repeat
+    url("../images/hero_apple_watch_series_8_spring__b1y8wb7xjc9y_large_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+}
+
+.title-text-container.module-3 {
+  height: 140px;
+}
+.title-text-container.module-3 img {
+  width: 28%;
+}
+
+/**************
+* MODULE 4
+**************/
+section.module-content.modules-4-5 {
+  display: flex;
+  flex-direction: column;
+}
+
+section.module-content-left.module-4 {
+  height: 500px;
+  background: no-repeat url("../images/promo_wwdc23__b68ptht3mro2_large_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 30px;
+  margin-top: 1rem;
+}
+
+.title-text-container-left.module-4 {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+}
+.title-text-container-left.module-4 img {
+  width: 40%;
+}
+
+.title-text-container-left.module-4 span {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  width: 70%;
+}
+
+/**************
+* MODULE 5
+**************/
+section.module-content-right.module-5 {
+  height: 500px;
+  background: no-repeat url("../images/promo_ipad__fioegapg12qi_large_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+  margin-top: 1rem;
+}
+
+.title-text-container-right.module-5 {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+.title-text-container-right.module-5 img {
+  width: 40%;
+}
+
+.title-text-container-right.module-5 h3 {
+  font-size: 2rem;
+}
+.title-text-container-right.module-5 span {
+  font-size: 1.1rem;
 }
 
 /**************
@@ -251,6 +386,61 @@ h1 {
     margin-right: 1.75rem;
     font-weight: 400;
   }
+
+  section.module-content.module-2 {
+    background: cover;
+    height: 600px;
+  }
+
+  .title-text-container.module-2 {
+    height: 165px;
+  }
+
+  .title-text-container.module-2 h2 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+  }
+
+  .title-text-container.module-2 span {
+    margin-bottom: 20px;
+  }
+
+  section.module-content.module-3 {
+    background-size: cover;
+    height: 650px;
+    background-position: center;
+  }
+
+  .title-text-container.module-3 {
+    height: 200px;
+  }
+
+  .title-text-container.module-3 img {
+    width: 40%;
+    padding-top: 30px;
+  }
+
+  section.module-content.modules-4-5 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  section.module-content-left.module-4 {
+    width: 48%;
+    margin: 2%;
+  }
+
+  section.module-content-left.module-4 img {
+    width: 48%;
+  }
+
+  section.module-content-left.module-4 span {
+    width: 100%;
+  }
+  section.module-content-right.module-5 {
+    width: 48%;
+  }
 }
 
 @media (min-width: 1068px) {
@@ -270,12 +460,12 @@ h1 {
     justify-content: start;
   }
 
-  section.module-content {
+  section.module-content.hero {
     height: 675px;
     background: no-repeat
       url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_large_2x.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center;
   }
 
   .title-text-container {
@@ -311,4 +501,92 @@ h1 {
     margin-right: 2rem;
     font-weight: 400;
   }
+
+  a.main-links {
+    color: var(--main-links);
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+
+  a i.fa-chevron-right {
+    color: var(--main-links);
+    margin-left: 7px;
+    font-size: 0.9rem;
+  }
+
+  section.module-content.module-2 {
+    height: 675px;
+    background-size: 200% auto;
+  }
+
+  .title-text-container.module-2 {
+    height: auto;
+  }
+  .title-text-container.module-2 h2 {
+    font-size: 3.25rem;
+    font-weight: 600;
+    font-family: var(--med-font);
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+    font-family: var(--thin-font);
+  }
+
+  .title-text-container span {
+    line-height: 1.2;
+    font-family: var(--thin-font);
+    margin-bottom: 13px;
+  }
+
+  section.module-content.module-3 {
+    background-size: 250% auto;
+    height: 650px;
+    background-position: center;
+  }
+
+  .title-text-container.module-3 {
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .title-text-container.module-3 img {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  section.module-content.modules-4-5 {
+    margin-top:0;
+  }
+
+  section.module-content-left.module-4 {
+    margin: 1%;
+    width: 49%;
+  }
+  
+  section.module-content-left.module-4 span {
+    width: 65%;
+  }
+
+  section.module-content-right.module-5 h3 {
+    font-family: var(--med-font);
+    font-weight: 600;
+    font-size: 2.5rem;
+
+  }
+
+  section.module-content-right.module-5 span {
+    letter-spacing: 1.14px;
+    margin-bottom: 10px;
+  }
+
+  a.main-links {
+    font-size: 1rem;
+  }
+
+  section.module-content-left.module-4 .fa-chevron-right {
+    font-size: 0.6rem;
+}
+  section.module-content-right.module-5 .fa-chevron-right {
+    font-size: 0.6rem;
+}
 }
