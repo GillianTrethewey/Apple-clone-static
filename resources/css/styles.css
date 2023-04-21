@@ -141,27 +141,26 @@ i {
 * MAIN SECTION
 **************/
 
-section.module-content.hero {
+.module-content.hero {
   height: 500px;
   background: no-repeat
     url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_medium_2x.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: start;
   padding: 30px;
 }
 
-.title-text-container,
-.title-text-container.module-2,
-.title-text-container.module-3 {
+.title-text-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 125px;
   padding: 1rem;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -197,8 +196,9 @@ h1 {
 * MODULE 2
 **************/
 
-section.module-content.module-2 {
+.module-content.module-2 {
   height: 500px;
+  padding: 30px;
   background: no-repeat
     url("../images/module_2__iphone14_yellow__eun20sn4imi6_large.jpg");
   background-size: 325%;
@@ -206,7 +206,6 @@ section.module-content.module-2 {
   display: flex;
   justify-content: center;
   align-items: start;
-  padding: 30px;
 }
 
 .title-text-container.module-2 {
@@ -227,11 +226,12 @@ section.module-content.module-2 {
   font-size: 1.1rem;
   line-height: 1.4;
 }
+
 /**************
 *  MODULE 3
 ***************/
 
-section.module-content.module-3 {
+.module-content.module-3 {
   height: 500px;
   background: no-repeat
     url("../images/hero_apple_watch_series_8_spring__b1y8wb7xjc9y_large_2x.jpg");
@@ -251,14 +251,18 @@ section.module-content.module-3 {
 }
 
 /**************
-* MODULE 4
+* MODULE 4-5
 **************/
-section.module-content.modules-4-5 {
+.module-content.modules-4-5 {
   display: flex;
   flex-direction: column;
 }
 
-section.module-content-left.module-4 {
+/**************
+*  MODULE 4
+***************/
+
+.module-content-left.module-4 {
   height: 500px;
   background: no-repeat url("../images/promo_wwdc23__b68ptht3mro2_large_2x.jpg");
   background-size: cover;
@@ -279,6 +283,7 @@ section.module-content-left.module-4 {
   text-align: center;
   height: 150px;
 }
+
 .title-text-container-left.module-4 img {
   width: 40%;
 }
@@ -292,7 +297,8 @@ section.module-content-left.module-4 {
 /**************
 * MODULE 5
 **************/
-section.module-content-right.module-5 {
+
+.module-content-right.module-5 {
   height: 500px;
   background: no-repeat url("../images/promo_ipad__fioegapg12qi_large_2x.jpg");
   background-size: cover;
@@ -313,6 +319,7 @@ section.module-content-right.module-5 {
   text-align: center;
   color: black;
 }
+
 .title-text-container-right.module-5 img {
   width: 40%;
 }
@@ -320,6 +327,7 @@ section.module-content-right.module-5 {
 .title-text-container-right.module-5 h3 {
   font-size: 2rem;
 }
+
 .title-text-container-right.module-5 span {
   font-size: 1.1rem;
 }
@@ -354,10 +362,6 @@ section.module-content-right.module-5 {
   }
 
   .title-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     height: 160px;
     padding: 1rem;
   }
@@ -375,19 +379,12 @@ section.module-content-right.module-5 {
     font-family: var(--thin-font);
   }
 
-  .links-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
   .links-container a {
     margin-right: 1.75rem;
     font-weight: 400;
   }
 
-  section.module-content.module-2 {
+  .module-content.module-2 {
     background: cover;
     height: 600px;
   }
@@ -405,7 +402,7 @@ section.module-content-right.module-5 {
     margin-bottom: 20px;
   }
 
-  section.module-content.module-3 {
+  .module-content.module-3 {
     background-size: cover;
     height: 650px;
     background-position: center;
@@ -420,25 +417,25 @@ section.module-content-right.module-5 {
     padding-top: 30px;
   }
 
-  section.module-content.modules-4-5 {
+  .module-content.modules-4-5 {
     display: flex;
     flex-direction: row;
     margin-top: 0;
   }
 
-  section.module-content-left.module-4 {
+  .module-content-left.module-4 {
     width: 48%;
     margin: 2%;
   }
 
-  section.module-content-left.module-4 img {
+  .module-content-left.module-4 img {
     width: 48%;
   }
 
-  section.module-content-left.module-4 span {
+  .module-content-left.module-4 span {
     width: 100%;
   }
-  section.module-content-right.module-5 {
+  .module-content-right.module-5 {
     width: 48%;
   }
 }
@@ -447,6 +444,7 @@ section.module-content-right.module-5 {
   header {
     height: 50px;
   }
+
   nav {
     max-width: 83%;
     padding-left: 4%;
@@ -460,7 +458,7 @@ section.module-content-right.module-5 {
     justify-content: start;
   }
 
-  section.module-content.hero {
+  .module-content.hero {
     height: 675px;
     background: no-repeat
       url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_large_2x.jpg");
@@ -469,10 +467,6 @@ section.module-content-right.module-5 {
   }
 
   .title-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     height: 165px;
     padding: 1rem;
   }
@@ -488,13 +482,6 @@ section.module-content-right.module-5 {
     font-size: 1.75rem;
     font-weight: 400;
     font-family: var(--thin-font);
-  }
-
-  .links-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
   }
 
   .links-container a {
@@ -514,18 +501,14 @@ section.module-content-right.module-5 {
     font-size: 0.9rem;
   }
 
-  section.module-content.module-2 {
+  .module-content.module-2 {
     height: 675px;
     background-size: 200% auto;
   }
 
-  .title-text-container.module-2 {
-    height: auto;
-  }
   .title-text-container.module-2 h2 {
     font-size: 3.25rem;
     font-weight: 600;
-    font-family: var(--med-font);
     letter-spacing: -0.2px;
     line-height: 1.2;
     font-family: var(--thin-font);
@@ -537,7 +520,7 @@ section.module-content-right.module-5 {
     margin-bottom: 13px;
   }
 
-  section.module-content.module-3 {
+  .module-content.module-3 {
     background-size: 250% auto;
     height: 650px;
     background-position: center;
@@ -545,7 +528,7 @@ section.module-content-right.module-5 {
 
   .title-text-container.module-3 {
     height: 200px;
-    margin-top: 30px;
+    margin-top: 2rem;
   }
 
   .title-text-container.module-3 img {
@@ -554,27 +537,26 @@ section.module-content-right.module-5 {
     margin: 0;
   }
 
-  section.module-content.modules-4-5 {
-    margin-top:0;
+  .module-content.modules-4-5 {
+    margin-top: 0;
   }
 
-  section.module-content-left.module-4 {
+  .module-content-left.module-4 {
     margin: 1%;
     width: 49%;
   }
-  
-  section.module-content-left.module-4 span {
+
+  .module-content-left.module-4 span {
     width: 65%;
   }
 
-  section.module-content-right.module-5 h3 {
+  .module-content-right.module-5 h3 {
     font-family: var(--med-font);
     font-weight: 600;
     font-size: 2.5rem;
-
   }
 
-  section.module-content-right.module-5 span {
+  .module-content-right.module-5 span {
     letter-spacing: 1.14px;
     margin-bottom: 10px;
   }
@@ -583,10 +565,8 @@ section.module-content-right.module-5 {
     font-size: 1rem;
   }
 
-  section.module-content-left.module-4 .fa-chevron-right {
+  .module-content-left.module-4 .fa-chevron-right,
+  .module-content-right.module-5 .fa-chevron-right {
     font-size: 0.6rem;
-}
-  section.module-content-right.module-5 .fa-chevron-right {
-    font-size: 0.6rem;
-}
+  }
 }
