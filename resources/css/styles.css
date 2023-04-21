@@ -27,6 +27,7 @@
   --thin-font: "SF-Pro-Thin", Arial, sans-serif;
   --white: #f5f5f7;
   --main-links: rgba(41, 151, 255);
+  --light-links: #f5f5f7;
 }
 
 html {
@@ -141,16 +142,24 @@ i {
 * MAIN SECTION
 **************/
 
-.module-content.hero {
+.module-content:first-child {
+  padding: 30px;
+}
+
+.module-content {
   height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 0.8%;
+  padding: 25px;
+}
+
+.module-content.hero {
   background: no-repeat
     url("../images/hero_iphone14pro_spring__9xo85pm6sbmm_medium_2x.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 30px;
 }
 
 .title-text-container {
@@ -161,6 +170,7 @@ i {
   height: 125px;
   padding: 1rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
 h1 {
@@ -197,24 +207,15 @@ h1 {
 **************/
 
 .module-content.module-2 {
-  height: 500px;
-  padding: 30px;
   background: no-repeat
     url("../images/module_2__iphone14_yellow__eun20sn4imi6_large.jpg");
   background-size: 325%;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
 }
 
 .title-text-container.module-2 {
   color: black;
   height: 150px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
 }
 
 .title-text-container.module-2 h2 {
@@ -222,6 +223,7 @@ h1 {
   font-family: var(--thin-font);
   padding-top: 10px;
 }
+
 .title-text-container span {
   font-size: 1.1rem;
   line-height: 1.4;
@@ -232,15 +234,11 @@ h1 {
 ***************/
 
 .module-content.module-3 {
-  height: 500px;
   background: no-repeat
     url("../images/hero_apple_watch_series_8_spring__b1y8wb7xjc9y_large_2x.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
   align-items: start;
-  padding: 30px;
 }
 
 .title-text-container.module-3 {
@@ -251,31 +249,15 @@ h1 {
 }
 
 /**************
-* MODULE 4-5
+* MODULE GROUPS
 **************/
-.module-content.modules-4-5 {
+
+.module-content-container {
   display: flex;
   flex-direction: column;
 }
 
-/**************
-*  MODULE 4
-***************/
-
-.module-content-left.module-4 {
-  height: 500px;
-  background: no-repeat url("../images/promo_wwdc23__b68ptht3mro2_large_2x.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  padding: 30px;
-  margin-top: 1rem;
-}
-
-.title-text-container-left.module-4 {
-  height: 140px;
+.title-text-container.half{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -284,52 +266,184 @@ h1 {
   height: 150px;
 }
 
-.title-text-container-left.module-4 img {
-  width: 40%;
+/**************
+*  MODULE 4
+***************/
+
+.module-content.module-4 {
+  background: no-repeat url("../images/promo_wwdc23__b68ptht3mro2_large_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  align-items: end;
 }
 
-.title-text-container-left.module-4 span {
+.title-text-container.module-4 {
+  height: 150px;
+}
+
+.title-text-container.module-4 img {
+  width: 35%;
+}
+
+.title-text-container.module-4 span {
   font-size: 1.1rem;
   line-height: 1.4;
-  width: 70%;
+  width: 63%;
+  padding: 12px 0;
 }
 
 /**************
 * MODULE 5
 **************/
 
-.module-content-right.module-5 {
-  height: 500px;
+.module-content.module-5 {
   background: no-repeat url("../images/promo_ipad__fioegapg12qi_large_2x.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
   align-items: start;
-  padding: 30px;
-  margin-top: 1rem;
 }
 
-.title-text-container-right.module-5 {
+.title-text-container.module-5 {
   height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  text-align: center;
   color: black;
 }
 
-.title-text-container-right.module-5 img {
-  width: 40%;
+.title-text-container.module-5 h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
-.title-text-container-right.module-5 h3 {
+.title-text-container.module-5 span {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/**************
+* MODULES 6-7
+**************/
+
+/**************
+* MODULE 6
+**************/
+
+.module-content.module-6 {
+  background: no-repeat url("../images/promo_mbp__ek7p477bkp6q_large_2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  align-items: start;
+  margin-bottom: 1%;
+}
+
+.title-text-container.module-6 {
+  height: 100px;
+  align-items: center;
+  color: white;
+  margin-top: 0;
+}
+
+.title-text-container.module-6 h3 {
   font-size: 2rem;
 }
 
-.title-text-container-right.module-5 span {
+.title-text-container.module-6 span {
   font-size: 1.1rem;
+  margin: 12px 0;
+}
+/**************
+* MODULE 7
+**************/
+
+.module-content.module-7 {
+  background: no-repeat
+    url("../images/promo_homepod__f7jnolq94m2y_large_2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  align-items: start;
+}
+
+.title-text-container.module-7 {
+  height: 100px;
+  align-items: center;
+  color: white;
+  margin-top: 0;
+}
+
+.title-text-container.module-7 h3 {
+  font-size: 2rem;
+}
+
+.title-text-container.module-7 span {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+/**************
+* MODULES 8-9
+**************/
+
+/**************
+* MODULE 8
+**************/
+.module-content.module-8 {
+  background: no-repeat url("../images/promo__sw58lbodkmqq_large_2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  align-items: start;
+}
+
+.title-text-container.module-8 {
+  height: 100px;
+  align-items: center;
+  color: white;
+  margin-top: 0;
+}
+
+.title-text-container.module-8 h3 {
+  font-size: 2rem;
+}
+
+.title-text-container.module-8 span {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+.title-text-container.module-8 a.main-links,
+.title-text-container.module-8 a.main-links i {
+  color: var(--light-links);
+}
+
+/**************
+* MODULE 9
+**************/
+
+.module-content.module-9 {
+  background: no-repeat url("../images/DrWho_promo__chsko5cvkody_large_2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  align-items: start;
+}
+
+.title-text-container.module-9 {
+  height: 100px;
+  align-items: center;
+  color: white;
+  margin-top: 0;
+}
+
+.title-text-container.module-9 img {
+  width: 50%;
+}
+
+.title-text-container.module-9 span {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+.title-text-container.module-9 a.main-links,
+.title-text-container.module-9 a.main-links i {
+  color: var(--light-links);
 }
 
 /**************
@@ -417,26 +531,23 @@ h1 {
     padding-top: 30px;
   }
 
-  .module-content.modules-4-5 {
+  .module-content-container{
     display: flex;
     flex-direction: row;
     margin-top: 0;
   }
 
-  .module-content-left.module-4 {
-    width: 48%;
-    margin: 2%;
+  .module-content.half {
+    width: 49%;
+    margin: 0.6%;
   }
 
-  .module-content-left.module-4 img {
+  .module-content.module-4 img {
     width: 48%;
   }
 
-  .module-content-left.module-4 span {
-    width: 100%;
-  }
-  .module-content-right.module-5 {
-    width: 48%;
+  .module-content.module-4 span {
+    width: 92%;
   }
 }
 
@@ -490,13 +601,10 @@ h1 {
   }
 
   a.main-links {
-    color: var(--main-links);
-    text-decoration: none;
     font-size: 1.25rem;
   }
 
   a i.fa-chevron-right {
-    color: var(--main-links);
     margin-left: 7px;
     font-size: 0.9rem;
   }
@@ -521,8 +629,8 @@ h1 {
   }
 
   .module-content.module-3 {
-    background-size: 250% auto;
-    height: 650px;
+    background-size: cover;
+    height: 700px;
     background-position: center;
   }
 
@@ -537,36 +645,36 @@ h1 {
     margin: 0;
   }
 
-  .module-content.modules-4-5 {
-    margin-top: 0;
-  }
-
-  .module-content-left.module-4 {
-    margin: 1%;
+  .module-content.half {
     width: 49%;
+    height: 625px;
+    margin: 0.4%;
   }
 
-  .module-content-left.module-4 span {
-    width: 65%;
+  .module-4 span {
+    width: 70%;
   }
 
-  .module-content-right.module-5 h3 {
-    font-family: var(--med-font);
+  .title-text-container.half h3 {
+    font-family: var(--thin-font);
     font-weight: 600;
     font-size: 2.5rem;
   }
 
-  .module-content-right.module-5 span {
+  .module-content.half.module-9 img {
+    width: 60%;
+    margin: 10px 0;
+  }
+  .title-text-container.half span {
     letter-spacing: 1.14px;
     margin-bottom: 10px;
   }
 
-  a.main-links {
-    font-size: 1rem;
+  .title-text-container.half.module-9 span {
+    letter-spacing: 1.5px;
   }
 
-  .module-content-left.module-4 .fa-chevron-right,
-  .module-content-right.module-5 .fa-chevron-right {
+  .title-text-container.half .fa-chevron-right {
     font-size: 0.6rem;
   }
 }
