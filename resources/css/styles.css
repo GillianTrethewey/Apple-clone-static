@@ -495,10 +495,10 @@ nav.footer-nav-narrow ul {
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+  font-size: 0.8rem;
 }
 
 nav.footer-nav-narrow ul li {
-  font-size: 0.8rem;
   line-height: 1.4;
 }
 
@@ -509,13 +509,13 @@ nav.footer-nav-narrow hr {
   width: 100%;
 }
 
-section.footer-details {
-  margin: 10px 20px;
-}
-
 footer h5 {
   font-size: 0.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+footer h5.break {
+  line-height: 1.7;
 }
 
 footer h5:first-child {
@@ -526,9 +526,34 @@ footer h5:nth-last-child(2) {
   margin-bottom: 10px;
 }
 
+footer hr.full-width {
+  display:none;
+}
 footer a.main-text {
   color: var(--main-links);
 }
+
+h5.sub-menu {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h5.sub-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+
+h5.sub-menu ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 /**************
 * MEDIA 833px
@@ -698,22 +723,8 @@ footer a.main-text {
     flex-direction: row-reverse;
   }
 
-  h5.sub-menu {
-    width: 100%;
-  }
-  h5.sub-menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-  }
-
-  h5.sub-menu ul li {
-  }
-
-  h5.sub-menu ul li:not(:last-child)::after {
-    content: "|";
-    margin-left: 10px;
-    margin-right: 10px;
+  footer h5.break br {
+    display:none;
   }
 }
 
